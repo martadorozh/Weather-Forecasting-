@@ -89,5 +89,3 @@ Model accuracy is evaluated using:
 - Application of deep learning techniques like LSTMs or Prophet models.
 - Real-time weather prediction system development.
 
-**End of Report.**
-
