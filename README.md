@@ -6,7 +6,7 @@ This report presents a comprehensive analysis of weather data for Ukraine, inclu
 ---
 ## **2. Data Preprocessing**
 ### **2.1 Data Loading**
-The dataset `GlobalWeatherRepository.csv` is loaded and inspected using `df.info()` to check for missing values and data types. The dataset contains the following numerical weather variables:
+Frome the dataset are selected the following numerical weather variables:
 - **Temperature (°C)**
 - **Precipitation (mm)**
 - **Wind Speed (kph)**
@@ -15,14 +15,14 @@ The dataset `GlobalWeatherRepository.csv` is loaded and inspected using `df.info
 - **UV Index**
 
 ### **2.2 Filtering Data for Ukraine**
-The dataset is filtered to focus only on Ukraine. The necessary columns (`last_updated`, `temperature_celsius`) are selected, and `last_updated` is converted to a `datetime` format for time-series analysis.
+The dataset is filtered to focus only on Ukraine. The necessary columns are selected and converted to a datetime format for time-series analysis.
 
 ### **2.3 Anomaly Detection & Handling Outliers**
 The Interquartile Range (IQR) method is used to remove anomalies in temperature data:
 - Values outside the range \[Q1 - 1.5*IQR, Q3 + 1.5*IQR\] are clipped to maintain data integrity.
 
 ### **2.4 Data Aggregation**
-- Data is resampled by day using the `.resample('D').mean()` function.
+- Data is resampled by day using the.
 - Missing values are filled using **linear interpolation** to maintain smooth trends in the time series.
 
 ---
@@ -70,8 +70,8 @@ Model accuracy is evaluated using:
 - **Root Mean Squared Error (RMSE)**: Measures standard deviation of prediction errors.
 
 **Results:**
-- **MSE:** (calculated value)
-- **RMSE:** (calculated value)
+- **MSE:** 4.41
+- **RMSE:**  2.0991563491100886
 
 ### **5.4 Long-Term Forecasting**
 - Forecast for the next **10 days** is generated and visualized.
